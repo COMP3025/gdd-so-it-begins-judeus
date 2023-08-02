@@ -3,17 +3,19 @@
 Um "Game Design Document" (GDD) é um documento crucial para o desenvolvimento de jogos, pois descreve em detalhes a visão, a mecânica e todos os elementos importantes do jogo. Embora o conteúdo exato de um GDD possa variar dependendo do projeto, alguns tópicos importantes que geralmente são incluídos são:
 
 1. **Visão Geral do Jogo:**
-   - Resumo do jogo.
-   - Objetivo geral e principais características.
+   - Shooter com perspectiva over-the-top; gameplay loop baseado em fases onde o personagem controlado pelo jogador deve limpar a arena de inimigos. A variedade e quantidade de inimigos muda de acordo com a dificuldade.
+   
 2. **Mecânica de Jogo:**
-   - Descrição detalhada das principais mecânicas de jogo (como movimento, combate, interação do jogador, etc.).
-   - Regras e sistemas que governam o funcionamento do jogo.
+   - Movimentação: O player movimenta o personagem pelas teclas "WASD"
+   - Combate: A mira do jogador é controlada pelo mouse; O botão esquerdo dispara a arma empunhada pelo jogador
+   - Interações com o cenário: Caixas de armas serão espalhadas pelo nível, estas caixas representam upgrades que deixaram o jogador mais forte
+   - Inimigos: Os inimigos se aproximarão do jogador, caso consigam encostá-lo, o jogador perde vida (HP)
 3. **História e Narrativa:**
-   - Enredo do jogo, incluindo personagens principais e eventos importantes.
-   - Sequências de eventos que ocorrem durante o jogo (se houver uma história linear).
+   - Personagem principal do jogo será o aluno da UniFil GAL LEVY; Os inimigos serão diversos tipos de zumbis Judeus.
+   - Numa nova remanescência de neo-nazis do Discord que decidem dominar o mundo com uma arma química que transforma os Judeus em zumbis, o protagonista Gal Levy - O Último Judeu luta contra seus inimigos para salvar a raça judaica.
 4. **Personagens e Inimigos:**
-   - Descrição dos personagens jogáveis e seus atributos únicos.
-   - Descrição dos inimigos, suas habilidades e comportamentos.
+   - O personagem principal Gal Levy conta com o armamento inicial de uma pistola. Este armamento pode ser melhorado ao coletar caixas de upgrade espalhados pelos níveis - Armas mais fortes e armaduras podem ser encontradas nessas caixas
+   - .
 5. **Níveis e Ambientes:**
    - Descrição de diferentes níveis, mundos ou ambientes no jogo.
    - Layout dos níveis, obstáculos e itens importantes.
