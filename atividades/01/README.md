@@ -27,11 +27,18 @@ Um "Game Design Document" (GDD) é um documento crucial para o desenvolvimento d
    - Como a música e os sons se relacionam com a jogabilidade e a narrativa.
 8. **Interface do Usuário (UI):**
    - Design da interface do usuário, incluindo menus, HUD e outras telas de interação.
+   -  O menu principal do jogo conterá o título do jogo, e botões de "Novo Jogo", para iniciar o jogo, "Continuar", caso o jogador tenha iniciado um jogo anteriormente, e "Opções", para que o jogador altere configurações.
+   - ...
 9. **Progressão e Recompensas:**
    - Sistema de progressão do jogador (experiência, níveis, etc.).
    - Recompensas e conquistas no jogo.
 10. **Controle de Jogo e Mapeamento de Teclas:**
-    - Descrição dos controles do jogo para cada plataforma suportada.
+    - Movimentação
+    - - As teclas "A" e "D" movimentam o personagem no eixo X.
+    - - As teclas "W" e "S" movimentam o personagem no eixo Y.
+    - Combate
+    - - O ponteiro do mouse direciona a mira do personagem.
+    - - O botão esquerdo do mouse dispara a arma do jogador.
 11. **Fluxo do Jogo:**
     - Diagrama de fluxo que mostra como o jogador avança pelo jogo e como as partes se conectam.
 12. **Considerações Técnicas:**
