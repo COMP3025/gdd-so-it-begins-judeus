@@ -14,10 +14,10 @@ Um "Game Design Document" (GDD) é um documento crucial para o desenvolvimento d
    - Personagem principal do jogo será o aluno da UniFil GAL LEVY; Os inimigos serão diversos tipos de zumbis Judeus.
    - Numa nova remanescência de neo-nazis do Discord que decidem dominar o mundo com uma arma química que transforma os Judeus em zumbis, o protagonista Gal Levy - O Último Judeu luta contra seus inimigos para salvar a raça judaica.
 4. **Personagens e Inimigos:**
-   - O personagem principal Gal Levy conta com o armamento inicial de uma pistola. Este armamento pode ser melhorado ao coletar caixas de upgrade espalhados pelos níveis - Armas mais fortes e armaduras podem ser encontradas nessas caixas
+   - O personagem principal Gal Levy conta com o armamento inicial de uma pistola. Este armamento pode ser melhorado ao coletar caixas de upgrade espalhados pelos níveis - Armas mais fortes e armaduras que aumentam a vida do jogador podem ser encontradas nessas caixas
    - .
 5. **Níveis e Ambientes:**
-   - Descrição de diferentes níveis, mundos ou ambientes no jogo.
+   - Haverá 2 níveis, um com ambientação diurna e outra noturn.
    - Layout dos níveis, obstáculos e itens importantes.
 6. **Arte e Estilo Visual:**
    - Direção de arte, estilo gráfico e referências visuais.
