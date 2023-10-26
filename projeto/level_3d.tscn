@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://d4ijhveg5cqm2"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_151bp"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_8matn"]
+size = Vector3(5, 0.5, 10)
+
+[sub_resource type="Skin" id="Skin_35wrd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jugew"]
+albedo_color = Color(0.403922, 0.631373, 0, 1)
+metallic = 0.21
+metallic_specular = 0.15
+roughness_texture_channel = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5xjtp"]
+size = Vector3(5.0139, 1, 10.0012)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_8vir5"]
+radius = 0.3
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vqg48"]
+albedo_color = Color(0.568627, 0.403922, 0.952941, 1)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_01w1p"]
+radius = 0.305213
+height = 0.930296
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5208i"]
+albedo_color = Color(0.752941, 0.0588235, 0.0862745, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8h7up"]
+size = Vector3(0.3, 0.09, 0.07)
+subdivide_width = 1
+subdivide_height = 1
+subdivide_depth = 1
+
+[sub_resource type="GDScript" id="GDScript_dmy8x"]
+script/source = "extends Camera3D
+
+# Variável para armazenar a referência ao personagem
+var character : CharacterBody3D
+
+# Função _ready é chamada quando o nó é inicializado
+func _ready():
+	# Obtém a referência ao personagem
+	character = get_node(\"player\") # Substitua pelo caminho correto
+
+# Função _process é chamada a cada quadro
+"
+
+[node name="Level3D" type="Node3D"]
+
+[node name="Ground" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.572199, -0.767598, 0.326821)
+mesh = SubResource("BoxMesh_8matn")
+skin = SubResource("Skin_35wrd")
+surface_material_override/0 = SubResource("StandardMaterial3D_jugew")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.589218, -1.03679, 0.313805)
+shape = SubResource("BoxShape3D_5xjtp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.818391, 0.574662, 0, -0.574662, -0.818391, 1.25322, 1.88816, -6.03315)
+
+[node name="player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.872648, 0, 0)
+script = ExtResource("1_151bp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.043237, 0)
+mesh = SubResource("CapsuleMesh_8vir5")
+surface_material_override/0 = SubResource("StandardMaterial3D_vqg48")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00355071, 0, 0.000463784)
+shape = SubResource("CapsuleShape3D_01w1p")
+
+[node name="olho" type="MeshInstance3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00595498, 0.154137, 0.287203)
+material_override = SubResource("StandardMaterial3D_5208i")
+mesh = SubResource("BoxMesh_8h7up")
+
+[node name="Camera3D" type="Camera3D" parent="player"]
+transform = Transform3D(1, 0, 0, 0, -0.00823788, 0.999966, 0, -0.999966, -0.00823788, 0.0742381, 3.99595, 0.115643)
+far = 3000.0
+script = SubResource("GDScript_dmy8x")
